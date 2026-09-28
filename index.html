@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intro to Hike Invite</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  :root{
+    --bg:#faf9f6;
+    --surface:#ffffff;
+    --surface-2:#f2f0ea;
+    --text:#1c1e22;
+    --text-muted:#5b6169;
+    --accent:#2b6e64;
+    --accent-ink:#ffffff;
+    --accent-soft:#dcede9;
+    --border:#e4e1d9;
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#14171a;
+      --surface:#1c2024;
+      --surface-2:#20252a;
+      --text:#edeef0;
+      --text-muted:#9ba3ac;
+      --accent:#5fbfae;
+      --accent-ink:#0e1513;
+      --accent-soft:#203330;
+      --border:#2a2f34;
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#14171a;
+    --surface:#1c2024;
+    --surface-2:#20252a;
+    --text:#edeef0;
+    --text-muted:#9ba3ac;
+    --accent:#5fbfae;
+    --accent-ink:#0e1513;
+    --accent-soft:#203330;
+    --border:#2a2f34;
+    color-scheme:dark;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',system-ui,sans-serif;
+    padding-inline:16px;
+    padding-block:56px 64px;
+    display:flex;
+    justify-content:center;
+  }
+  .card{
+    width:100%;
+    max-width:480px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:32px;
+  }
+  .eyebrow{
+    font-size:0.72rem;
+    font-weight:600;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:10px;
+  }
+  h1{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:1.7rem;
+    letter-spacing:-0.01em;
+    text-wrap:balance;
+    margin:0 0 18px;
+  }
+  .when{
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+    background:var(--surface-2);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:14px 16px;
+    margin-bottom:10px;
+  }
+  .when .icon{
+    font-family:'JetBrains Mono',monospace;
+    color:var(--accent);
+    font-size:0.9rem;
+    line-height:1.5;
+  }
+  .when .text{font-size:0.92rem;line-height:1.5;}
+  .when .text strong{display:block;font-weight:600;}
+  .where{
+    font-size:0.85rem;
+    color:var(--text-muted);
+    margin:0 0 26px;
+    line-height:1.5;
+  }
+  .where a{color:var(--accent);}
+
+  h2.label{
+    font-size:0.78rem;
+    font-weight:600;
+    color:var(--text-muted);
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    margin:0 0 12px;
+  }
+  .btn-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-bottom:8px;
+  }
+  .btn{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-family:'Inter',system-ui,sans-serif;
+    font-size:0.9rem;
+    font-weight:500;
+    padding:12px 14px;
+    border-radius:9px;
+    border:1px solid var(--border);
+    background:var(--surface-2);
+    color:var(--text);
+    text-decoration:none;
+    transition:border-color 0.15s ease, transform 0.08s ease;
+  }
+  .btn:hover{border-color:var(--accent);}
+  .btn:active{transform:scale(0.98);}
+  .btn .dot{
+    width:8px;height:8px;border-radius:50%;
+    background:var(--accent);flex:none;
+  }
+  .ics-note{
+    font-size:0.82rem;
+    color:var(--text-muted);
+    line-height:1.5;
+    margin:10px 0 12px;
+  }
+
+  @media (max-width:420px){
+    .btn-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="eyebrow">You're invited</div>
+  <h1>Intro to Hike</h1>
+
+  <div class="when">
+    <span class="icon">&#128198;</span>
+    <span class="text">
+      <strong>Thursday, October 1, 2026</strong>
+      2:00 &ndash; 2:45pm Central Time
+    </span>
+  </div>
+  <p class="where">Join by video: <a href="https://meet.google.com/wrr-qshp-grs" target="_blank" rel="noopener">meet.google.com/wrr-qshp-grs</a></p>
+
+  <h2 class="label">Save the date</h2>
+  <p class="ics-note" style="margin-top:0;">Pick your calendar app below and we'll fill in the details for you.</p>
+  <div class="btn-grid">
+    <a class="btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Intro+to+Hike&dates=20261001T190000Z/20261001T194500Z&details=Join+by+video%3A+https%3A%2F%2Fmeet.google.com%2Fwrr-qshp-grs" target="_blank" rel="noopener"><span class="dot"></span>Google Calendar</a>
+    <a class="btn" href="intro-to-hike.ics"><span class="dot"></span>Apple Calendar</a>
+    <a class="btn" href="https://outlook.live.com/calendar/0/deeplink/compose?path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=2026-10-01T19%3A00%3A00Z&enddt=2026-10-01T19%3A45%3A00Z&subject=Intro+to+Hike&body=Join+by+video%3A+https%3A%2F%2Fmeet.google.com%2Fwrr-qshp-grs" target="_blank" rel="noopener"><span class="dot"></span>Outlook (personal)</a>
+    <a class="btn" href="https://outlook.office.com/calendar/0/deeplink/compose?path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=2026-10-01T19%3A00%3A00Z&enddt=2026-10-01T19%3A45%3A00Z&subject=Intro+to+Hike&body=Join+by+video%3A+https%3A%2F%2Fmeet.google.com%2Fwrr-qshp-grs" target="_blank" rel="noopener"><span class="dot"></span>Outlook (work)</a>
+    <a class="btn" href="https://calendar.yahoo.com/?v=60&view=d&type=20&title=Intro+to+Hike&st=20261001T190000Z&dur=0045&desc=Join+by+video%3A+https%3A%2F%2Fmeet.google.com%2Fwrr-qshp-grs" target="_blank" rel="noopener"><span class="dot"></span>Yahoo Calendar</a>
+  </div>
+  <p class="ics-note">Not sure which Outlook is yours? Personal is for a regular Microsoft or Hotmail account; work is for a company email through Microsoft 365.</p>
+</div>
+</body>
+</html>
